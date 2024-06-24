@@ -6,18 +6,24 @@ import java.util.List;
 import java.util.Map;
 
 public class Module implements Function {
+    private final Function values;
+
+    public Module(Function values) {
+        this.values = values;
+    }
+
     @Override
     public double evaluate(Map<String, Double> variables) {
-        return 0;
+        return Math.abs(values.evaluate(variables));
     }
 
     @Override
     public List<String> getMyVariables() {
-        return null;
+        return values.getMyVariables();
     }
 
     @Override
     public String print() {
-        return null;
+        return "|" + values.print() + "|";
     }
 }
