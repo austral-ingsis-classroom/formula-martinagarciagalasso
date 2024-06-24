@@ -1,2 +1,4 @@
-package edu.austral.ingsis.math.function.Visitor;public class Multiplication {
+package edu.austral.ingsis.math.function.Visitor.Opperands;
+
+public class Multiplication {
 }

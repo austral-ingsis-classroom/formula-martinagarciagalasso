@@ -1,5 +1,12 @@
-package edu.austral.ingsis.math.function;
+package edu.austral.ingsis.math.function.Composite;
 
-import edu.austral.ingsis.math.Expression;
+import java.util.List;
+import java.util.Map;
 
-public interface Function extends Expression {}
+public interface Function {
+    double evaluate(Map<String, Double> variables);
+
+    List<String> getMyVariables();
+
+    String print();
+}

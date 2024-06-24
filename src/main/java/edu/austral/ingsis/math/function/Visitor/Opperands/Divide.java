@@ -1,4 +1,4 @@
 package edu.austral.ingsis.math.function.Visitor.Opperands;
 
-public class Addition {
+public class Divide {
 }

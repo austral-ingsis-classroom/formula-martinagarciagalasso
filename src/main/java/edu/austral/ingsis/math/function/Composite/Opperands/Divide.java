@@ -5,7 +5,7 @@ import edu.austral.ingsis.math.function.Composite.Function;
 import java.util.List;
 import java.util.Map;
 
-public class Power implements Function {
+public class Divide implements Function {
     @Override
     public double evaluate(Map<String, Double> variables) {
         return 0;

@@ -1,2 +1,4 @@
-package edu.austral.ingsis.math.function.Composite;public class Values {
+package edu.austral.ingsis.math.function.Composite;
+
+public class Values {
 }

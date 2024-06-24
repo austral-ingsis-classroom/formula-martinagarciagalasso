@@ -1,2 +1,4 @@
-package edu.austral.ingsis.math.function.Visitor;public class Substraction {
+package edu.austral.ingsis.math.function.Visitor.Opperands;
+
+public class Substraction {
 }
