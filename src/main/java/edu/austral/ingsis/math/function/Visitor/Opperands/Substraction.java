@@ -7,6 +7,7 @@ import java.util.Map;
 
 public class Substraction implements Function {
 
+
     @Override
     public double evaluate(Map<String, Double> variables) {
         return 0;
