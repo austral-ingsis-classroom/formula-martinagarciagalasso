@@ -23,6 +23,7 @@ public class Addition implements Function {
 
     @Override
     public List<String> getMyVariables() {
+        //para obtener todas las vaariables de las funciones
         List<String> leftVariables = leftFunction.getMyVariables();
         List<String> rightVariables = rightFunction.getMyVariables();
         List<String> combinedVariables = new ArrayList<>(leftVariables);
