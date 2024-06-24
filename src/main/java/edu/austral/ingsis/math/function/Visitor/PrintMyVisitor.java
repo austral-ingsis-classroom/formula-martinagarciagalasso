@@ -16,7 +16,7 @@ public class PrintMyVisitor implements Visitor<String>{
     }
 
     @Override
-    public String visit(Values values) {
+    public String visit(Val val) {
         return null;
     }
 
@@ -45,10 +45,8 @@ public class PrintMyVisitor implements Visitor<String>{
         return null;
     }
 
-    @Override
-    public String visit(Val val) {
-        return null;
-    }
+
+
 
     @Override
     public String visit(Module module) {

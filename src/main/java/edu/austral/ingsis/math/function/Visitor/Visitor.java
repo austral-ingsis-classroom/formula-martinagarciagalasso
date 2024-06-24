@@ -7,7 +7,7 @@ public interface Visitor<M>{
     M visit(Addition addition);
     M visit(Power power);
 
-    M visit(Values values);
+    M visit(Val val);
 
     M visit(Substraction substraction);
 

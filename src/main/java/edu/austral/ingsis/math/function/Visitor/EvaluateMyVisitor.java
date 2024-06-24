@@ -30,45 +30,42 @@ public class EvaluateMyVisitor implements Visitor<Double> {
     public Double visit(Power power) {
         return Math.pow(power.getL().accept(this), power.getR().accept(this));
     }
-    
+    @Override
+    public Double visit(Val val) {
+        return val.getValue();
+    }
+
+    @Override
+    public Double visit(Substraction substraction) {
+        return substraction.getL().accept(this) - substraction.getR().accept(this);
+    }
+
 
     @Override
     public Double visit(Module module) {
         return Math.abs(module.getNumber().accept(this));
     }
 
-    @Override
-    public Double visit(Values values) {
-        return null;
-    }
-
-    @Override
-    public Double visit(Substraction substraction) {
-        return null;
-    }
 
     @Override
     public Double visit(Multiplication multiplication) {
-        return null;
+        return multiplication.getL().accept(this) * multiplication.getR().accept(this);
     }
 
     @Override
     public Double visit(Divide division) {
-        return null;
+        return division.getL().accept(this) / division.getR().accept(this);
     }
 
     @Override
     public Double visit(SquareRoot squareRoot) {
-        return null;
+        return Math.sqrt(squareRoot.getVal().accept(this));
     }
 
     @Override
     public Double visit(Variables variables) {
-        return null;
+        return variables.getVariable(variables.getAName(), this.variables);
     }
 
-    @Override
-    public Double visit(Val val) {
-        return null;
-    }
+
 }

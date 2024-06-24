@@ -7,9 +7,22 @@ import java.util.List;
 import java.util.Map;
 
 public class Multiplication implements Function {
+    private final Function l;
+    private final Function r;
+
+    public Multiplication(Function l, Function r) {
+        this.l = l;
+        this.r = r;
+    }
 
     @Override
     public <M> M accept(Visitor<M> visitor) {
-        return null;
+        return visitor.visit(this);
+    }
+    public Function getL() {
+        return l;
+    }
+    public Function getR() {
+        return r;
     }
 }

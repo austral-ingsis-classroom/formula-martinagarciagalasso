@@ -14,7 +14,7 @@ public class Power implements Function {
 
     @Override
     public <M> M accept(Visitor<M> visitor) {
-        return null;
+        return visitor.visit(this);
     }
 
     public Function getL() {

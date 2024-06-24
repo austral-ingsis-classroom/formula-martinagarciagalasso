@@ -17,4 +17,7 @@ public class Val implements Function {
 
     }
 
+    public Double getValue() {
+        return number;
+    }
 }

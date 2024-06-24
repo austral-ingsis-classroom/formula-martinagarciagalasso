@@ -7,10 +7,18 @@ import java.util.List;
 import java.util.Map;
 
 public class SquareRoot implements Function {
+    private final Function val;
+
+    public SquareRoot(Function val) {
+        this.val = val;
+    }
 
 
     @Override
     public <M> M accept(Visitor<M> visitor) {
-        return null;
+        return visitor.visit(this);
+    }
+    public Function getVal() {
+        return val;
     }
 }
