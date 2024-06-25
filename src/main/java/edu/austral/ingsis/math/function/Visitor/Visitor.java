@@ -21,7 +21,7 @@ public interface Visitor<M>{
 
     M visit(Variables variables);
 
-    M visit(Val val);
+
 
     M visit(edu.austral.ingsis.math.function.Visitor.Opperands.Module module);
 }
