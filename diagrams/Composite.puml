@@ -1,0 +1,65 @@
+@startuml
+interface Function {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Variables {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Values {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Addition {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class SquareRoot {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Power {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Multiplication {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Module {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+class Divide {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+}
+
+Variables -|> Function
+Values -|> Function
+Addition -|> Function
+SquareRoot -|> Function
+Power -|> Function
+Multiplication -|> Function
+Module -|> Function
+Divide -|> Function
+
+@enduml

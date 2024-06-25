@@ -1,0 +1,94 @@
+@startuml
+interface Visitor {
+  + visit(function: Function): M
+}
+
+interface Function {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class EvaluateMyVisitor {
+  + visit(function: Function): double
+}
+
+class GetMyVariableVisitor {
+  + visit(function: Function): List<String>
+}
+
+class PrintMyVisitor {
+  + visit(function: Function): String
+}
+
+class Val {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class Variables {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class Addition {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class Divide {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class Module {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class Multiplication {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class Power {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+class SquareRoot {
+  + evaluate(variables: Map<String, Double>): double
+  + getMyVariables(): List<String>
+  + print(): String
+  + accept(visitor: Visitor): void
+}
+
+EvaluateMyVisitor -|> Visitor
+GetMyVariableVisitor -|> Visitor
+PrintMyVisitor -|> Visitor
+
+Val -|> Function
+Variables -|> Function
+Addition -|> Function
+Divide -|> Function
+Module -|> Function
+Multiplication -|> Function
+Power -|> Function
+SquareRoot -|> Function
+
+@enduml
