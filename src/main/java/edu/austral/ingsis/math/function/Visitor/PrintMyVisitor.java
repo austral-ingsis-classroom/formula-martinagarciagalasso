@@ -43,7 +43,14 @@ public class PrintMyVisitor implements Visitor<String>{
 
     @Override
     public String visit(Val val) {
-        return val.getValue().toString();
+        return ConvertToLatex(val.getValue());
+
+    }
+    public String ConvertToLatex(Double val){
+        if(val%1==0){
+            return String.valueOf(val.intValue());
+        }
+        return String.valueOf(val);
     }
 
     @Override
