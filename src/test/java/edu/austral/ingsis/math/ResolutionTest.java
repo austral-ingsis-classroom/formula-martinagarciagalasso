@@ -32,7 +32,8 @@ public class ResolutionTest {
   /** Case (9 / 2) * 3 */
   @Test
   public void shouldResolveSimpleFunction3() {
-    final Double result = visitor.visit(new Multiplication(new Divide(new Val(9.0), new Val(2.0)), new Val(3.0)));
+    final Double result =
+        visitor.visit(new Multiplication(new Divide(new Val(9.0), new Val(2.0)), new Val(3.0)));
 
     assertThat(result, equalTo(13.5d));
   }
@@ -40,7 +41,8 @@ public class ResolutionTest {
   /** Case (27 / 6) ^ 2 */
   @Test
   public void shouldResolveSimpleFunction4() {
-    final Double result =  visitor.visit(new Power(new Divide(new Val(27.0), new Val(6.0)), new Val(2.0)));
+    final Double result =
+        visitor.visit(new Power(new Divide(new Val(27.0), new Val(6.0)), new Val(2.0)));
 
     assertThat(result, equalTo(20.25d));
   }
@@ -48,7 +50,8 @@ public class ResolutionTest {
   /** Case 36 ^ (1/2) */
   @Test
   public void shouldResolveSimpleFunction5() {
-    final Double result = visitor.visit(new Power(new Val(36.0), new Divide(new Val(1.0), new Val(2.0))));
+    final Double result =
+        visitor.visit(new Power(new Val(36.0), new Divide(new Val(1.0), new Val(2.0))));
 
     assertThat(result, equalTo(6d));
   }
@@ -72,7 +75,9 @@ public class ResolutionTest {
   /** Case (5 - 5) * 8 */
   @Test
   public void shouldResolveSimpleFunction8() {
-    final Double result =  visitor.visit(new Multiplication(new Substraction(new Val(5.0), new Val(5.0)), new Val(8.0)));
+    final Double result =
+        visitor.visit(
+            new Multiplication(new Substraction(new Val(5.0), new Val(5.0)), new Val(8.0)));
 
     assertThat(result, equalTo(0d));
   }

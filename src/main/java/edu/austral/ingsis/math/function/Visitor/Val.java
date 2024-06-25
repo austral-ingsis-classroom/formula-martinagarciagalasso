@@ -1,23 +1,23 @@
 package edu.austral.ingsis.math.function.Visitor;
-//VALUES
+
+// VALUES
 public class Val implements Function {
-    private final Double number;
+  private final Double number;
 
-    public Val(Double number) {
-        this.number = number;
-    }
-    public Double getANumber() {
-        return number;
-    }
+  public Val(Double number) {
+    this.number = number;
+  }
 
+  public Double getANumber() {
+    return number;
+  }
 
-    @Override
-    public <M> M accept(Visitor<M> visitor) {
-        return visitor.visit(this);
+  @Override
+  public <M> M accept(Visitor<M> visitor) {
+    return visitor.visit(this);
+  }
 
-    }
-
-    public Double getValue() {
-        return number;
-    }
+  public Double getValue() {
+    return number;
+  }
 }

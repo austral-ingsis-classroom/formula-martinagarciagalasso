@@ -1,27 +1,23 @@
 package edu.austral.ingsis.math.function.Visitor;
 
-import edu.austral.ingsis.math.function.Composite.Values;
 import edu.austral.ingsis.math.function.Visitor.Opperands.*;
 
-public interface Visitor<M>{
-    M visit(Addition addition);
-    M visit(Power power);
+public interface Visitor<M> {
+  M visit(Addition addition);
 
-    M visit(Val val);
+  M visit(Power power);
 
-    M visit(Substraction substraction);
+  M visit(Val val);
 
-    M visit(Multiplication multiplication);
+  M visit(Substraction substraction);
 
-    M visit(Divide division);
+  M visit(Multiplication multiplication);
 
-    M visit(SquareRoot squareRoot);
+  M visit(Divide division);
 
+  M visit(SquareRoot squareRoot);
 
+  M visit(Variables variables);
 
-    M visit(Variables variables);
-
-
-
-    M visit(edu.austral.ingsis.math.function.Visitor.Opperands.Module module);
+  M visit(edu.austral.ingsis.math.function.Visitor.Opperands.Module module);
 }

@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Map;
 
 public interface Function {
-    double evaluate(Map<String, Double> variables);
+  double evaluate(Map<String, Double> variables);
 
-    List<String> getMyVariables();
+  List<String> getMyVariables();
 
-    String print();
+  String print();
 }
